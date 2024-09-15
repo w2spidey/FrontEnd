@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Project</title>
     <style>
-        /* General Reset and Box-Sizing */
+        
         * {
             margin: 0;
             padding: 0;
@@ -168,16 +168,15 @@
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('contactForm');
             form.addEventListener('submit', (e) => {
-                e.preventDefault(); // Prevent form from submitting
+                e.preventDefault(); 
 
-                // Basic form validation
                 const name = document.getElementById('name').value.trim();
                 const email = document.getElementById('email').value.trim();
                 const message = document.getElementById('message').value.trim();
 
                 if (name && email && message) {
                     alert('Now take me in :)');
-                    form.reset(); // Reset form after submission
+                    form.reset();
                 } else {
                     alert('Please fill in all fields.');
                 }
