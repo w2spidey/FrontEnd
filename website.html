@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Project</title>
+    <style>
+        /* General Reset and Box-Sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 1200px;
+        }
+
+        h1, h2 {
+            margin-bottom: 1rem;
+        }
+
+        .gallery-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            flex: 1 1 calc(33% - 2rem);
+            background: #f4f4f4;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        form {
+            display: grid;
+            gap: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #555;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>College Project</h1>
+    </header>
+    
+    <section id="home">
+        <h2>Welcome to Our Project</h2>
+        <p>Frontend Related.</p>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>I am Kunwar Ayaan Ahmed from 1st year.</p>
+	<p>I participated in an Ideathon organized by the Institution of Engineers (India) as part of a team of three. Our team was honored with a Special Recognition award, a distinction that was only unique to us.</p>
+	<p>Our Idea's PPT is linked down:</p> 
+	<p>https://www.canva.com/design/DAGO7ov1jWE/Cbw-rCci8q8eZ-tz2llPPg/view</p>
+	<p>I’ve been deeply interested in coding for the past two months and have made significant progress in both C and Python. My enthusiasm for programming was further fueled by my cousin, an entrepreneur who worked on high-profile police cases during his college years. His success in a challenging field has inspired me to dive into coding with dedication and curiosity.</p>
+    </section>
+    
+    <section id="gallery">
+        <h2>Project Gallery</h2>
+        <div class="gallery-items">
+            <div class="gallery-item">Project 1</div>
+            <div class="gallery-item">Project 2</div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; Knows Python till Inheritance.</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent form from submitting
+
+                // Basic form validation
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if (name && email && message) {
+                    alert('Now take me in :)');
+                    form.reset(); // Reset form after submission
+                } else {
+                    alert('Please fill in all fields.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
